@@ -1,0 +1,49 @@
+.mainStyleInputFrame {
+    border:1px solid black;
+    border-radius:20px;
+}
+#dynasty{
+    width:170px;
+    height:50px;
+}
+.mainStyleDivFrame{
+}
+#dynastyDivFrame{
+    position:absolute;
+    width:170px;
+    height:50px;
+    left:40px;
+    top:20px;
+}
+#eraNameDivFrame{
+    position:absolute;
+    width:170px;
+    height:50px;
+    left:220px;
+    top:20px;
+}
+#eraName{
+    width:170px;
+    height:50px;
+    font-size: 30px;
+}
+.mainFootDiv{
+    position:absolute;
+    bottom: 0px;
+    width:100%;
+    height:6px;
+    background-color: blue;
+}
+#mainFootFont{
+    font-size: 10px;
+}
+#abstract{
+  /*  display: none;*/
+    width:150px;
+    height:200px;
+    border:1px solid black;
+    position:absolute;
+    top:90px;
+    left: 30px;
+
+}

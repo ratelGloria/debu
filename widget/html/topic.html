@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <script type="text/javascript" src="../script/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../script/hammer.js"></script>
+    <script type="text/javascript" src="../script/api.js"></script>
+    <script type="text/javascript" src="../script/bottom.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/menuStyle.css"/>
+</head>
+<body >
+
+<div class="centerBox content">
+
+    <ul class="TableStyle centerBox menuUL" >
+       <li id="topic_name"></li>
+       <li id="topic_answer"></li>
+        <li id="topic_answer_content"></li>
+
+        <li style="text-align: center;right: auto">
+            <button id="show" type="button" style="background-color: #03a9f4;width: 100px;text-align: center;right: auto">show</button>
+            <button id="next" type="button" style="background-color: greenyellow;width: 100px;text-align: center;right: auto;margin-left: 10px">next</button>
+
+        </li>
+    </ul>
+</div>
+
+
+</body>
+<script type="text/javascript" src="../script/debrisMenu.js"></script>
+
+<script>
+    apiready = function() {
+        var content = '';
+
+        $('#show').on('touchend', function () {
+
+            $('#topic_answer_content').text(content);
+        });
+        api.ajax({
+                url: 'http://192.168.18.2:8036/menu/topicList',
+                method: 'post',
+                dataType: 'json',
+                returnAll: true,
+                data: {
+                    values: {}
+                }
+            },
+            function (ret, err) {
+                if (ret) {
+                    $('#topic_name').text(ret.body.data.title);
+                    content = ret.body.data.content;
+                }
+            }
+        )
+
+        $('#next').on('touchend',function(){
+            api.ajax({
+                    url: 'http://192.168.18.2:8036/menu/topicList',
+                    method: 'post',
+                    dataType: 'json',
+                    returnAll: true,
+                    data: {
+                        values: {}
+                    }
+                },
+                function (ret, err) {
+                    if (ret) {
+                        $('#topic_name').text(ret.body.data.title);
+                        content = ret.body.data.content;
+                    }
+                }
+            )
+        })
+    }
+</script>
+</html>

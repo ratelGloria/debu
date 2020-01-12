@@ -1,0 +1,227 @@
+*{
+margin:0;
+    padding:0;
+    cursor: pointer;
+}
+body{
+    cursor:pointer;
+    display: flex;
+ /*   background-color: black;*/
+  }
+.flexStyle{
+    display: flex;
+}
+.content{
+    display: flex;
+    width: 100%;
+    height: 100%;
+   /* background-color: #ffff77;*/
+}
+.top_height{
+    background-color: #CCFF00;
+    height: 60px;
+}
+.before_height{
+    height: 100%;
+    font-size: 18px;
+}
+.beforeAllNum{
+    font-size: 18px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 100%;
+}
+.top1{
+    height:40px;
+    background-color: white;
+ }
+.top{
+    position: absolute;
+    width:100%;
+    height: 60px;
+    background-color: #669933;
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bottom{
+    position: absolute;
+  /*  z-index: 100;*/
+    width:100%;
+    height: 60px;
+    background-color: #003300;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px 10px 0px 0px;
+}
+.menuUL li{
+    height: 50px;
+    width: 200px;
+    border:1px solid black;
+    display: flex;
+    border-radius: 10px;
+}
+
+.menuUL span{
+   font-size: 20px;
+    white-space: normal;
+
+}
+#mark{
+    border-right: 1px solid black;
+    color: white;
+    font-size: 16px;
+}
+#forget{
+    border-lift: 1px solid black;
+    color: white;
+    font-size: 16px;
+}
+.chooseDiv{
+    width: 50%;
+    height: 60px;
+    display: inline;
+
+}
+.centerBox{
+    align-items: center;
+    justify-content: center;
+
+}
+#answer{
+    font-size: 20px;
+}
+.come_on{
+    height: 40px;
+    width:80px;
+    background-color: #00acc1;
+    position: absolute;
+    top:90px;
+    left: 30px;
+}
+.chooseSpan{
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.TableTdStyle {
+    width:300px;
+    border-radius: 10px;
+}
+#td1{
+    height: 80px;
+    background-color: #00acc1;
+}
+
+#td2{
+    height: 180px;
+    background-color: #ffff77;
+}
+.ul{
+    margin-top: -20px;
+}
+.TableStyle tr{
+    height: 100px;
+    width:200px;
+}
+.img{
+  /*  border: 1px solid black;*/
+    display: flex;
+    width: 60px;
+}
+.gap{
+    height: 46px;
+/*    background-color: black;*/
+}
+.choose{
+   /* width: 100px;*/
+    height: 5px;
+    border: 1px solid black;
+}
+.imgSize{
+    height: 50px;
+    width: 50px;
+}
+.font{
+    font-size: 20px;
+ /*   border: 1px solid black;*/
+   /* width: 90px;*/
+}
+.leftFlex div{
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 60px;
+
+}
+.leftFlex span{
+    margin-right: 10px;
+    margin-bottom: 6px;
+}
+.rightFlex span{
+
+    margin-left: 10px;
+    margin-bottom: 6px;
+}
+.rightFlex div{
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 60px;
+
+}
+.rightFlex{
+   /* justify-content: flex-start;
+    align-items: center;*/
+    width: 50%;
+    height: 60px;
+}
+.leftFlex{
+    width: 50%;
+    height: 60px;
+   /* justify-content: flex-end;
+    align-items: center;*/
+/*    margin-left: 65%;*/
+}
+/*@keyframes fade-in {
+    0% {left: -100px;}!*初始状态 透明度为0*!
+    40% {left: -50px;}!*过渡状态 透明度为0*!
+    100% {left: 0px;}!*结束状态 透明度为1*!
+}*/
+@-webkit-keyframes fade-in {/*针对webkit内核*/
+    0% {left: -100px;}/*初始状态 透明度为0*/
+    40% {left: -50px;}/*过渡状态 透明度为0*/
+    100% {left: 0px;}/*结束状态 透明度为1*/
+}
+.beforeBlock {
+
+    height: 100%;
+    width: 188px;
+    background-color: black;
+    position: absolute;
+    z-index: 100;
+    border-right: 1px solid black;
+    display: none;
+/*    left: -200px;
+    animation: fade-in 2s linear infinite;*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

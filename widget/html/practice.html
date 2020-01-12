@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <script type="text/javascript" src="../script/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../script/hammer.js"></script>
+    <script type="text/javascript" src="../script/api.js"></script>
+    <script type="text/javascript" src="../script/bottom.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/menuStyle.css"/>
+</head>
+<body >
+<div class="beforeBlock">
+
+    <ul class="beforeBlockUl">
+        <li class="top_height"><span class="flexStyle  beforeAllNum">11111</span></li>
+        <li class="top1"><span class="flexStyle centerBox before_height">11111</span></li>
+    </ul>
+</div>
+<div class="top">
+    <div class="rightFlex"><!--flexStyle-->
+        <!--  <div class="img">
+              <img src="../image/toRight.svg" class="imgSize">
+          </div>-->
+        <div class="font flexStyle ">
+            <span class="centerBox before">before</span>
+        </div>
+    </div>
+    <div class="leftFlex">
+        <div class="font flexStyle ">
+            <span class="centerBox next">next</span>
+        </div>
+       <!-- <div class="img">
+            <img src="../image/toLeft.svg" class="imgSize">
+        </div>-->
+
+    </div>
+        </div>
+<div class="bottom">
+
+    <div class="chooseDiv" id="mark"><span class="chooseSpan flexStyle centerBox">标记</span></div>
+    <div class="chooseDiv" id="forget"><span class="chooseSpan flexStyle centerBox">忘了</span></div>
+
+</div>
+<input type="button" value="come on" id="come_on" class="come_on">
+
+<div class="centerBox content">
+
+  <!--  <table class="TableStyle centerBox" cellspacing="0" cellpadding="0">
+        <tr >
+            <td class="TableTdStyle" id="td1"><span id="question"></span></td>
+        </tr>
+        <tr>
+            <td class="gap"></td>
+        </tr>
+        <tr >
+            <td class="TableTdStyle" id="td2"><span id="answer"></span></td>
+        </tr>
+        <tr>
+            <td class="gap"></td>
+        </tr>
+
+    </table>-->
+    <ul class="TableStyle centerBox ul" >
+        <li class="TableTdStyle flexStyle centerBox" id="td1"><span id="question">11111</span></li>
+        <li class="TableTdStyle gap"></li>
+        <li class="TableTdStyle flexStyle centerBox" id="td2"><span id="answer">1111</span></li>
+    </ul>
+</div>
+
+
+
+
+
+</body>
+<script type="text/javascript" src="../script/menuScript.js"></script>
+<script>
+    $(".before").on('starttouch',function(){
+
+        api.openDrawerPane({
+            type: 'left'
+        });
+
+    })
+
+   /* api.openDrawerLayout({
+        name: 'main',
+        url: './main.html',
+        animation: {
+            type: 'none'
+        },
+        leftPane: {
+            name: 'leftPane',
+            url: 'leftPane.html'
+        }
+    })*/
+</script>
+</html>

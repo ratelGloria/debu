@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <script type="text/javascript" src="../script/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/mianStyle.css" />
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+
+    <title>Hello APP</title>
+</head>
+<body>
+<form action="yemian" method="post" >
+    <div class="mainStyleDivFrame" id="dynastyDivFrame">
+        <input type="text" id="dynasty" class="mainStyleInputFrame">
+    </div>
+    <div class="mainStyleDivFrame" id="eraNameDivFrame">
+        <input type="text" id="eraName" class="mainStyleInputFrame">
+    </div>
+</form>
+    <div class="abstractDivFrame" id="abstractDivFrame">
+        <font id="abstract" class="mainStyleInputFrame"></font>
+    </div>
+    <div class="mainFootDiv" id="mainFootDiv">
+       <!-- <font id="mainFootFont">公元前221年</font>-->
+    </div>
+<table id="test">
+
+</table>
+<input type="button" id="ceshi2" value="button">
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script>
+    apiready=function(){
+
+       /* api.setScreenOrientation({
+            orientation: 'auto_landscape'
+        });*/
+
+         $ceshi2= $("#ceshi2")
+         $test= $("#test")
+        $ceshi2.on('touchstart',function () {
+
+           /* $test.append("<div style='background-color: red;height: 20px;width: 20px'>"+"www"+"</div>")*/
+            $test.append("<tr><td>"+"www"+"</td></tr>")
+        })
+        var dynasty=$api.byId("dynasty");
+
+        dynasty.onblur=function(){
+
+            api.ajax({
+                url: 'http://39.96.43.223:8888/user/logInServlet?userName=qq&password=111111',
+                method: 'get',
+                timeout: 30,
+                dataType: 'json',
+                returnAll: false,
+                data: {
+                    values: {name: 'dynasty'},
+
+                }
+            } ,function (ret, err) {
+                if(ret){
+                    api.alert({ msg: JSON.stringify(ret) });
+                }
+            });
+
+        }
+
+    }
+
+
+</script>
+</html>
