@@ -48,7 +48,8 @@
             $('#topic_answer_content').text(content);
         });
         api.ajax({
-                url: 'http://192.168.18.2:8036/menu/topicList',
+                url: 'http://49.234.113.106:8036/menu/topicList',
+                // url: 'http://192.168.18.2:8036/menu/topicList',
                 method: 'post',
                 dataType: 'json',
                 returnAll: true,
@@ -67,7 +68,8 @@
         $('#next').on('touchend',function(){
             $('#topic_answer_content').text();
             api.ajax({
-                    url: 'http://192.168.18.2:8036/menu/topicList',
+                    url: 'http://49.234.113.106:8036/menu/topicList',
+                    // url: 'http://192.168.18.2:8036/menu/topicList',
                     method: 'post',
                     dataType: 'json',
                     returnAll: true,
